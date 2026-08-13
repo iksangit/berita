@@ -1,0 +1,138 @@
+{
+  "skipToContent": "Lewati ke konten",
+  
+  "hero": {
+    "headline": "Saya Membangun Pengalaman Digital",
+    "subhead": "Dengan Kode."
+  },
+  
+  "downloadCV": "Unduh CV",
+  "viewWork": "Lihat Kerja Saya",
+  "availableForProjects": "Tersedia untuk Proyek",
+  
+  "tags": {
+    "web": "Pengembangan Web",
+    "mobile": "Pengembangan Mobile",
+    "ui": "Desain UI/UX"
+  },
+  
+  "about": {
+    "title": "Seorang Developer yang Suka",
+    "subtitle": "Membangun Hal-hal"
+  },
+  
+  "highlights": {
+    "web": "Pengembangan Web",
+    "mobile": "Pengembangan Mobile",
+    "ui": "Desain UI/UX",
+    "server": "Backend & Database"
+  },
+  
+  "services": {
+    "title": "Apa Yang Bisa Saya Bangun",
+    "intro": "Layanan dan kemampuan yang dapat saya tawarkan untuk proyek selanjutmu."
+  },
+  
+  "servicesItems": {
+    "fullstack": "Pengembangan Full-Stack Web",
+    "mobile": "Pengembangan Mobile",
+    "ui": "Implementasi UI",
+    "backend": "Backend & Database"
+  },
+  
+  "highlights": {
+    "nextjs": "Next.js",
+    "typescript": "TypeScript",
+    "react": "React",
+    "tailwind": "Tailwind CSS",
+    "flutter": "Flutter",
+    "dart": "Dart",
+    "postgresql": "PostgreSQL",
+    "prisma": "Prisma",
+    "restapi": "REST API"
+  },
+  
+  "projects": {
+    "title": "Kerja Saya yang Dipilih",
+    "intro": "Beberapa hal yang saya bangun sambil belajar, bereksperimen, dan menyelesaikan masalah nyata.",
+    "filter": {
+      "all": "Semua",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ui": "UI/UX"
+    },
+    "viewDetails": "Lihat Detail"
+  },
+  
+  "journey": {
+    "title": "Perjalanan Saya",
+    "intro": "Sebuah timeline dari pertumbuhan saya sebagai developer."
+  },
+  
+  "footer": {
+    "description": "Membangun pengalaman digital dengan kode. Sarjana Teknik Informatik yang khalayak tentang menciptakan aplikasi modern, scalable, dan user-friendly.",
+    "quickLinks": "Tautan Cepat",
+    "connect": "Hubungi",
+    "copyright": "&copy; {year} {name}. Semua hak dilindungi.",
+    "builtWith": "Dibangun dengan"
+  },
+  
+  "contact": {
+    "title": "Punya Ide?",
+    "subtitle": "Mari Bangun!",
+    "paragraph": "Silakan hubungi saya. Saya akan sangat senang mendengar dari Anda dan membahas proyek atau kesempatan yang potencial.",
+    "labels": {
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan"
+    },
+    "button": "Kirim Pesan",
+    "success": "Pesan berhasil teririm! Saya akan segera membalas.",
+    "error": "Gagal mengirim pesan. Silakan coba lagi nanti.",
+    "validation": {
+      "nameRequired": "Nama wajib diisi",
+      "nameMin": "Nama minimal 2 karakter",
+      "emailRequired": "Email wajib diisi",
+      "emailValid": "Silakan masukkan email yang valid",
+      "messageRequired": "Pesan wajib diisi",
+      "messageMin": "Pesan minimal 10 karakter",
+      "messageMax": "Pesan maksimal 500 karakter"
+    }
+  },
+  
+  "skillCategories": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "mobile": "Mobile",
+    "tools": "Alat"
+  },
+  
+  "skillNames": {
+    "nextjs": "Next.js",
+    "react": "React",
+    "typescript": "TypeScript",
+    "tailwindcss": "Tailwind CSS",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "nodejs": "Node.js",
+    "api": "REST API",
+    "postgresql": "PostgreSQL",
+    "prisma": "Prisma",
+    "flutter": "Flutter",
+    "dart": "Dart",
+    "git": "Git",
+    "github": "GitHub",
+    "vscode": "VS Code",
+    "figma": "Figma"
+  },
+  
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "skills": "Keterampilan",
+    "projects": "Proyek",
+    "journey": "Perjalanan",
+    "contact": "Kontak"
+  }
+}

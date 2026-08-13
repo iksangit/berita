@@ -1,0 +1,138 @@
+{
+  "skipToContent": "Skip to content",
+  
+  "hero": {
+    "headline": "I Build Digital Experiences",
+    "subhead": "With Code."
+  },
+  
+  "downloadCV": "Download CV",
+  "viewWork": "View My Work",
+  "availableForProjects": "Available for Projects",
+  
+  "tags": {
+    "web": "Web Development",
+    "mobile": "Mobile Development",
+    "ui": "UI/UX"
+  },
+  
+  "about": {
+    "title": "A Developer Who Loves",
+    "subtitle": "Building Things"
+  },
+  
+  "highlights": {
+    "web": "Web Development",
+    "mobile": "Mobile Development",
+    "ui": "UI/UX Design",
+    "server": "Backend & Database"
+  },
+  
+  "services": {
+    "title": "What I Can Build",
+    "intro": "Services and capabilities I can offer for your next project."
+  },
+  
+  "servicesItems": {
+    "fullstack": "Full-Stack Web Development",
+    "mobile": "Mobile Development",
+    "ui": "UI Implementation",
+    "backend": "Backend & Database"
+  },
+  
+  "highlights": {
+    "nextjs": "Next.js",
+    "typescript": "TypeScript",
+    "react": "React",
+    "tailwind": "Tailwind CSS",
+    "flutter": "Flutter",
+    "dart": "Dart",
+    "postgresql": "PostgreSQL",
+    "prisma": "Prisma",
+    "restapi": "REST API"
+  },
+  
+  "projects": {
+    "title": "Selected Works",
+    "intro": "Some things I've built while learning, experimenting, and solving real problems.",
+    "filter": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ui": "UI/UX"
+    },
+    "viewDetails": "View Details"
+  },
+  
+  "journey": {
+    "title": "My Journey",
+    "intro": "A timeline of my growth as a developer."
+  },
+  
+  "footer": {
+    "description": "Building digital experiences with code. Software Engineering student passionate about creating modern, scalable, and user-friendly applications.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "&copy; {year} {name}. All rights reserved.",
+    "builtWith": "Built with"
+  },
+  
+  "contact": {
+    "title": "Have an idea?",
+    "subtitle": "Let's build it.",
+    "paragraph": "Feel free to reach out. I'd love to hear from you and discuss potential projects or opportunities.",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "button": "Send Message",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Failed to send message. Please try again later.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMin": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailValid": "Please enter a valid email",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message must be under 500 characters"
+    }
+  },
+  
+  "skillCategories": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "mobile": "Mobile",
+    "tools": "Tools"
+  },
+  
+  "skillNames": {
+    "nextjs": "Next.js",
+    "react": "React",
+    "typescript": "TypeScript",
+    "tailwindcss": "Tailwind CSS",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "nodejs": "Node.js",
+    "api": "REST API",
+    "postgresql": "PostgreSQL",
+    "prisma": "Prisma",
+    "flutter": "Flutter",
+    "dart": "Dart",
+    "git": "Git",
+    "github": "GitHub",
+    "vscode": "VS Code",
+    "figma": "Figma"
+  },
+  
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "journey": "Journey",
+    "contact": "Contact"
+  }
+}
