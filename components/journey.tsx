@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { useTranslation } from "@/providers/translation-provider";
 
 const timeline = [
   {
@@ -22,16 +23,19 @@ const timeline = [
 ];
 
 export function Journey() {
+  const { t } = useTranslation();
+
   return (
     <section id="journey" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              My <span className="text-gradient">Journey</span>
+              {t("journey.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="text-gradient">{t("journey.title").split(" ").at(-1)}</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              A timeline of my growth as a developer.
+              {t("journey.intro")}
             </p>
           </div>
         </ScrollReveal>

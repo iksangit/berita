@@ -23,7 +23,7 @@ const jsonLd = {
   "@type": "Person",
   name: siteConfig.name,
   url: "https://iksan.dev",
-  jobTitle: `${siteConfig.role} & Junior Full-Stack Developer`,
+  jobTitle: "Software Engineering Student & Junior Full-Stack Developer",
   sameAs: [
     siteConfig.github,
     siteConfig.linkedin,
@@ -51,7 +51,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Iksan" }],
   creator: "Iksan",
-openGraph: {
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://iksan.dev",
@@ -65,10 +69,6 @@ openGraph: {
     title: "Iksan — Full-Stack Developer & Software Engineering Student",
     description:
       "Personal portfolio of Iksan, a Software Engineering Student and Junior Full-Stack Developer building modern web and mobile applications.",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 

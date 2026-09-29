@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
-import Image from "next/image";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/social-icons";
 import { siteConfig } from "@/data/config";
 import { Button } from "@/components/ui/button";
@@ -211,46 +210,55 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Profile Photo */}
+          {/* Right: Code visual + floating badges */}
           <div className="relative hidden lg:flex lg:justify-center">
             <div className="relative">
-              {/* Glow ring */}
+              {/* Code window */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="relative h-[380px] w-[380px]"
+                className="relative rounded-xl border border-border bg-card/80 p-6 shadow-2xl shadow-primary/5 backdrop-blur-sm"
               >
-                {/* Outer glow */}
-                <div className="absolute inset-0 rounded-full bg-primary/20 blur-2xl" />
-                {/* Animated ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30"
-                />
-                {/* Photo frame */}
-                <div className="absolute inset-4 overflow-hidden rounded-full border-4 border-primary/40 shadow-2xl shadow-primary/20">
-                  <Image
-                    src={siteConfig.profileImage}
-                    alt={`${siteConfig.name} — ${siteConfig.role}`}
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    sizes="380px"
-                  />
-                  {/* Subtle gradient overlay at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/40 to-transparent" />
+                {/* Window chrome */}
+                <div className="mb-4 flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-red-500/80" />
+                  <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
+                  <div className="h-3 w-3 rounded-full bg-green-500/80" />
+                  <span className="ml-2 font-mono text-xs text-muted-foreground/30">developer.ts</span>
                 </div>
-                {/* Name badge */}
+
+                {/* Code lines with syntax highlighting */}
+                <div className="font-mono text-sm leading-relaxed">
+                  {codeLines.map((line, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.5 + i * 0.1 }}
+                      style={{ paddingLeft: `${line.indent * 1.5}rem` }}
+                      className="flex"
+                    >
+                      <span className="mr-4 inline-block w-4 select-none text-right text-muted-foreground/30">
+                        {i + 1}
+                      </span>
+                      <span>
+                        {line.tokens.map((token, j) => (
+                          <span key={j} className={token.color}>
+                            {token.text}
+                          </span>
+                        ))}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Cursor blink */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9 }}
-                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-card/90 px-4 py-1.5 text-sm font-semibold text-foreground shadow-lg backdrop-blur-sm"
-                >
-                  {siteConfig.name} <span className="text-primary">✦</span>
-                </motion.div>
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ repeat: Infinity, duration: 1 }}
+                  className="ml-8 mt-0.5 h-4 w-2 bg-primary"
+                />
               </motion.div>
 
               {/* Floating tech badges */}

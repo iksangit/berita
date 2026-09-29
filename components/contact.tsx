@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/data/config";
+import { useTranslation } from "@/providers/translation-provider";
 
 interface FormState {
   status: "idle" | "loading" | "success" | "error";
@@ -14,6 +15,7 @@ interface FormState {
 }
 
 export function Contact() {
+  const { t } = useTranslation();
   const [formState, setFormState] = useState<FormState>({ status: "idle", message: "" });
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -24,17 +26,17 @@ export function Contact() {
     const email = formData.email.trim();
     const message = formData.message.trim();
 
-    if (!name) newErrors.name = "Name is required";
-    else if (name.length < 2) newErrors.name = "Name must be at least 2 characters";
-    if (!email) newErrors.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = "Please enter a valid email";
-    if (!message) newErrors.message = "Message is required";
-    else if (message.length < 10) newErrors.message = "Message must be at least 10 characters";
-    else if (message.length > 500) newErrors.message = "Message must be under 500 characters";
+    if (!name) newErrors.name = t("contact.validation.nameRequired");
+    else if (name.length < 2) newErrors.name = t("contact.validation.nameMin");
+    if (!email) newErrors.email = t("contact.validation.emailRequired");
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = t("contact.validation.emailValid");
+    if (!message) newErrors.message = t("contact.validation.messageRequired");
+    else if (message.length < 10) newErrors.message = t("contact.validation.messageMin");
+    else if (message.length > 500) newErrors.message = t("contact.validation.messageMax");
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  }, [formData]);
+  }, [formData, t]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,11 +60,11 @@ export function Contact() {
         throw new Error(data?.error || "Failed to send");
       }
 
-      setFormState({ status: "success", message: "Message sent successfully! I'll get back to you soon." });
+      setFormState({ status: "success", message: t("contact.success") });
       setFormData({ name: "", email: "", message: "" });
       setErrors({});
     } catch {
-      setFormState({ status: "error", message: "Failed to send message. Please try again later." });
+      setFormState({ status: "error", message: t("contact.error") });
     }
   };
 
@@ -90,11 +92,11 @@ export function Contact() {
           <div className="lg:col-span-2">
             <ScrollReveal>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Have an idea?{" "}
-                <span className="text-gradient">Let&apos;s build it.</span>
+                {t("contact.title")}{" "}
+                <span className="text-gradient">{t("contact.subtitle")}</span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Feel free to reach out. I&apos;d love to hear from you and discuss potential projects or opportunities.
+                {t("contact.paragraph")}
               </p>
             </ScrollReveal>
 
@@ -129,7 +131,7 @@ export function Contact() {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="contact-name" className="mb-2 block text-sm font-medium text-foreground">
-                      Name
+                      {t("contact.labels.name")}
                     </label>
                     <Input
                       id="contact-name"
@@ -148,7 +150,7 @@ export function Contact() {
                   </div>
                   <div>
                     <label htmlFor="contact-email" className="mb-2 block text-sm font-medium text-foreground">
-                      Email
+                      {t("contact.labels.email")}
                     </label>
                     <Input
                       id="contact-email"
@@ -169,7 +171,7 @@ export function Contact() {
                 </div>
                 <div className="mt-6">
                   <label htmlFor="contact-message" className="mb-2 block text-sm font-medium text-foreground">
-                    Message
+                    {t("contact.labels.message")}
                   </label>
                   <Textarea
                     id="contact-message"
@@ -204,7 +206,7 @@ export function Contact() {
                     </>
                   ) : (
                     <>
-                      Send Message
+                      {t("contact.button")}
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}

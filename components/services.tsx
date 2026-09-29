@@ -12,25 +12,25 @@ export function Services() {
     {
       icon: Code2,
       title: t("servicesItems.fullstack"),
-      description: t("services.title"),
+      description: t("servicesItems.fullstack.desc"),
       highlights: [t("highlights.nextjs"), t("highlights.typescript"), t("highlights.react")],
     },
     {
       icon: Smartphone,
       title: t("servicesItems.mobile"),
-      description: t("servicesItems.mobile"),
+      description: t("servicesItems.mobile.desc"),
       highlights: [t("highlights.flutter"), t("highlights.dart"), t("highlights.restapi")],
     },
     {
       icon: Palette,
       title: t("servicesItems.ui"),
-      description: t("servicesItems.ui"),
-      highlights: [t("highlights.tailwind"), t("highlights.figma"), t("highlights.restapi")],
+      description: t("servicesItems.ui.desc"),
+      highlights: [t("highlights.tailwind"), t("highlights.figma"), t("highlights.ui")],
     },
     {
       icon: Server,
       title: t("servicesItems.backend"),
-      description: t("services.intro"),
+      description: t("servicesItems.backend.desc"),
       highlights: [t("highlights.postgresql"), t("highlights.prisma"), t("highlights.restapi")],
     },
   ];
@@ -41,8 +41,8 @@ export function Services() {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {t("services.title")}
-              <span className="text-gradient">{t("services.intro")}</span>
+              {t("services.title")}{" "}
+              <span className="text-gradient">{t("services.subtitle")}</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               {t("services.intro")}
