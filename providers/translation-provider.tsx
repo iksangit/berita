@@ -28,6 +28,7 @@ const defaultTranslations: TranslationFile = {
   "tags.ui": "UI/UX",
   "about.title": "A Developer Who Loves",
   "about.subtitle": "Building Things",
+  "about.description": "I'm a Software Engineering student passionate about full-stack web development, mobile apps, UI/UX, and digital technology. I love turning ideas into clean, functional, and user-centric digital products.",
   "highlights.web": "Web Development",
   "highlights.mobile": "Mobile Development",
   "highlights.ui": "UI/UX Design",
@@ -214,7 +215,7 @@ export const useTranslation = (): TranslationContextType => {
     // Fallback saat build/SSR: kembalikan context default (English)
     return {
       locale: "en",
-      setLocale: (locale: Locale) => {},
+      setLocale: (_locale: Locale) => {},
       t: (key: string): string => key,
       translations: {} as Record<string, TranslationFile>,
     };
@@ -232,10 +233,4 @@ export const TranslationProvider = ({ children }: { children: React.ReactNode })
 
   const value = {
     locale,
-    setLocale,
-    t,
-    translations: locale === "id" ? idTranslations : defaultTranslations,
-  } as unknown as TranslationContextType;
-
-  return <TranslationContext.Provider value={value}>{children}</TranslationContext.Provider>;
-};
+    s

@@ -4,6 +4,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TranslationProvider } from "@/providers/translation-provider";
+import { siteConfig } from "@/data/config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,13 +21,13 @@ const geistMono = Geist_Mono({
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Iksan",
+  name: siteConfig.name,
   url: "https://iksan.dev",
-  jobTitle: "Software Engineering Student & Junior Full-Stack Developer",
+  jobTitle: `${siteConfig.role} & Junior Full-Stack Developer`,
   sameAs: [
-    "REPLACE_WITH_GITHUB_URL",
-    "REPLACE_WITH_LINKEDIN_URL",
-    "REPLACE_WITH_INSTAGRAM_URL",
+    siteConfig.github,
+    siteConfig.linkedin,
+    siteConfig.instagram,
   ],
 };
 
@@ -84,15 +85,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
       >
-        <TranslationProvider>{children}</TranslationProvider>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <TranslationProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </TranslationProvider>
       </body>
     </html>
   );
