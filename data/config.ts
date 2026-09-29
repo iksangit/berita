@@ -9,7 +9,7 @@ export const siteConfig = {
   instagram: "https://instagram.com/ikmochan",
   linkedin: "https://linkedin.com/in/ikmochan",
   cv: "/CV_Moch_Iksan (1).pdf",
-  profileImage: "/images/profile.png",
+  profileImage: "/images/profile.jpg",
   stats: [
     { label: "Projects", value: "3+" },
     { label: "Technologies", value: "8+" },
